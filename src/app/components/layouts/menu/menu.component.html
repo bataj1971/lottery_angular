@@ -1,0 +1,58 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+  <div class="container-fluid">
+    <a class="navbar-brand" routerLink="home">Lottery</a>
+    <button
+      type="button"
+      class="navbar-toggler"
+      data-target="#menutocollapse"
+      data-toggle="collapse"
+      data-bs-toggle="collapse"
+      data-bs-target="#menutocollapse"
+      aria-controls="menutocollapse"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+      (click)="toggleNavbarMenu()"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div
+      id="menutocollapse"
+      class="collapse navbar-collapse"
+      [ngClass]="{ show: navbarMenuOpen }"
+    >
+      <ul class="navbar-nav mr-auto">
+        <li *ngIf="auth.logged" class="nav-item" (click)="toggleNavbarMenu()">
+          <a class="nav-link" routerLink="game" routerLinkActive="active"
+            >Game</a
+          >
+        </li>
+        <li *ngIf="!auth.logged" class="nav-item" (click)="toggleNavbarMenu()">
+          <a class="nav-link" routerLink="login" routerLinkActive="active"
+            >Login</a
+          >
+        </li>
+
+        <li class="nav-item" (click)="toggleNavbarMenu()">
+          <a
+            *ngIf="auth.logged"
+            class="nav-link"
+            (click)="logout()"
+            routerLinkActive="active"
+            >Logout</a
+          >
+        </li>
+
+        <li
+          *ngIf="auth.logged"
+          class="nav-item float-end userinfo"
+          (click)="toggleNavbarMenu()"
+        >
+          <a class="nav-link userinfoname" routerLink="userprofile">{{
+            auth.user.fullName
+          }}</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>

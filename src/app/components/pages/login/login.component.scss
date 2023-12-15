@@ -1,0 +1,50 @@
+@import "../../../../scss/variables";
+
+.login-form-container {
+
+  display: block;
+  text-align: center;
+
+  & .login-form {
+    text-align: left;
+    width: 300px;
+    display: inline-block;
+    & input.ng-invalid.ng-touched {
+      border-color: red;
+    }
+    & .toggle-user-list {
+      float:right;
+    }
+    & .error-message {
+      color:red;
+      animation: fadeIn 1s;
+    }
+  }
+
+
+}
+
+.user-list-container {
+  display: block;
+  text-align: center;
+
+  & .user-list {
+    text-align: left;
+    width: 300px;
+    display: inline-block;
+
+    margin-top: 1em;
+    animation: fadeIn 1s;
+    & .user-account{
+      cursor: pointer;
+      &:hover{
+        background-color: $colorBackgroundListItemHover;
+      }
+    }
+  }
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}

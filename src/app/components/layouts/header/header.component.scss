@@ -1,0 +1,33 @@
+.head-container {
+  background-color: #71c530;
+  margin-bottom: 10%;
+  color:#eee;
+  overflow: hidden;
+  & a {
+    color: inherit;
+    text-decoration: none;
+  }
+  & h1 {
+    padding: 10px;
+    color: white;
+    margin: 0;
+  }
+
+  & > .description {
+    padding: 0px 10px;
+
+    margin: 0;
+  }
+  & .source {
+
+    padding: 10px;
+    display: inline-block;
+    margin: 0;
+  }
+  & .projects {
+
+    padding: 10px;
+    float: right;
+    margin: 0;
+  }
+}

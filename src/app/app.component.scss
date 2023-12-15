@@ -1,0 +1,9 @@
+@import "../scss/variables";
+
+.app-content{
+    padding:20px;
+    margin-top: $headerHeight;
+    @media screen and (max-width: $small) {
+        padding:2px;
+      }
+}

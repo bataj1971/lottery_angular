@@ -1,0 +1,35 @@
+.number-panel-container {
+  display: block;
+  text-align: center;
+  user-select: none;
+}
+.button-container {
+  display: block;
+  text-align: center;
+  user-select: none;
+  & .play-button {
+    padding-left: 3em;
+    padding-right: 3em;
+  }
+}
+
+.panel-result-list-container {
+  display: block;
+  text-align: center;
+  margin-top: 20px;
+
+  & .panel-result-list {
+    display: inline-block;
+    text-align: left;
+    width: 400px;
+    & span {
+      font-weight: bold;
+    }
+    & .correct {
+      background-color: rgba(100, 255, 100, 0.3);
+    }
+    & .error {
+      background-color: rgba(255, 100, 100, 0.3);
+    }
+  }
+}

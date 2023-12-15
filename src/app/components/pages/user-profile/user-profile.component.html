@@ -1,0 +1,13 @@
+<div class="card" style="width: 18rem">
+  <div class="card-body">
+    <h5 class="card-title">{{ auth.user.userName }}</h5>
+    <div class="card-text">
+      <div>E-mail: {{ auth.user.email }}</div>
+      <div>Name: {{ auth.user.fullName }}</div>
+    </div>
+
+    <a class="btn btn-primary" routerLink="/game">Go to game page</a>
+    <a class="btn btn-primary" (click)="logout()">Logout</a>
+  </div>
+</div>
+<h3></h3>

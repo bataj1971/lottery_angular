@@ -1,0 +1,40 @@
+:host {
+  margin: 1em;
+  overflow: hidden;
+  display: inline-block;
+}
+
+.number-container-header {
+  & div {
+    display: inline-block;
+    color: red;
+  }
+  & .randomize {
+    float: left;
+    cursor: pointer;
+  }
+  & .clear {
+    float: right;
+    cursor: pointer;
+  }
+}
+
+.number-container {
+  width: auto;
+
+
+  display: inline-grid;
+  column-gap: 5px;
+  row-gap: 5px;
+
+  & .panel-number {
+    position: absolute;
+    display: flex;
+    width: fit-content;
+    height: fit-content;
+    font-weight: bolder;
+    line-height: 0.9em;
+    opacity: 0.3;
+    z-index: -100;
+  }
+}

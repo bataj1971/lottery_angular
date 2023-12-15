@@ -1,0 +1,24 @@
+<div class="number-panel-container">
+  <app-number-panel
+    *ngFor="let panel of panelList"
+    [panelNumber]="panel.panelNumber"
+    [range]="panel.range"
+    [selectableNumberCount]="panel.selectableNumberCount"
+    (selectionChanged)="refreshResults()"
+  ></app-number-panel>
+</div>
+<div class="button-container">
+  <button class="btn btn-danger play-button" (click)="play()">Play</button>
+</div>
+
+<div class="panel-result-list-container">
+  <ul class="list-group panel-result-list">
+    <li
+      class="list-group-item panel-result"
+      [ngClass]="result.status"
+      *ngFor="let result of resultMessages"
+    >
+      <span>Panel {{result.panelId}} : </span>  {{ result.message }}
+    </li>
+  </ul>
+</div>

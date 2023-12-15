@@ -1,0 +1,28 @@
+<div class="number-container-header">
+  <div class="randomize" (click)="randomize()">
+    <fa-icon [icon]="faShuffle"></fa-icon> RND
+
+  </div>
+  <div class="clear" (click)="clear()">
+    <fa-icon [icon]="faTrashCan"></fa-icon> Del
+
+  </div>
+</div>
+
+<div
+  class="number-container"
+  [ngStyle]="{ gridTemplateColumns: 'repeat(' + numbersInRow + ', 1fr)' }"
+>
+
+  <div class="panel-number"
+  [ngStyle]="{ marginLeft:panelNumberSettings.margin+'px',fontSize:panelNumberSettings.size+'px' }"
+  >{{ panelNumber }}</div>
+
+  <app-number
+    *ngFor="let item of [].constructor(range); let i = index"
+    (click)="toggleNumber(i+1)"
+    [lotteryNumber]="i+1"
+    [selected]="selectedNumbers.includes(i+1)"
+  ></app-number>
+
+</div>
