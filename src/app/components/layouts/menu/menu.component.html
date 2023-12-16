@@ -36,9 +36,10 @@
         <li class="nav-item" (click)="toggleNavbarMenu()">
           <a
             *ngIf="auth.logged"
-            class="nav-link"
+            class="nav-link active"
+             routerLinkActive="active"
             (click)="logout()"
-            routerLinkActive="active"
+
             >Logout</a
           >
         </li>

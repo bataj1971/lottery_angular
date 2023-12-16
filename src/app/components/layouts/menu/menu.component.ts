@@ -34,7 +34,7 @@ export class MenuComponent implements OnInit {
   }
 
   logout() {
-    if (!confirm("Confoirm logout")) return;
+    if (!confirm("Confirm logout")) return;
     this.store.dispatch(authLogout());
     this.router.navigate(['/login']);
   }

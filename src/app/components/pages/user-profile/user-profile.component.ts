@@ -2,6 +2,8 @@ import { Component, OnDestroy } from '@angular/core';
 import { Auth } from '../../../store/Auth';
 import { Observable, Subscription } from 'rxjs';
 import { Store } from '@ngrx/store';
+import { authLogout } from '../../../store/auth.actions';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-user-profile',
@@ -13,13 +15,15 @@ export class UserProfileComponent implements OnDestroy{
   auth: Auth = new Auth();
   authSubscription: Subscription;
 
-  constructor(private store: Store<{ auth: Auth }>) {
+  constructor(private store: Store<{ auth: Auth }>, private router:Router) {
     this.auth$ = this.store.select('auth');
     this.authSubscription = this.auth$.subscribe((auth: Auth) => (this.auth = auth));
   }
 
   logout() {
-    alert("logout");
+    this.store.dispatch(authLogout());
+    this.router.navigate(['login']);
+
   }
 
   ngOnDestroy(): void {

@@ -1,13 +1,21 @@
-<div class="card" style="width: 18rem">
-  <div class="card-body">
-    <h5 class="card-title">{{ auth.user.userName }}</h5>
-    <div class="card-text">
-      <div>E-mail: {{ auth.user.email }}</div>
-      <div>Name: {{ auth.user.fullName }}</div>
-    </div>
+<div class="user-profile-container">
+  <div class="card" style="width: 18rem">
+          <h5 class="card-header">{{ auth.user.userName }}</h5>
+    <div class="card-body">
 
-    <a class="btn btn-primary" routerLink="/game">Go to game page</a>
-    <a class="btn btn-primary" (click)="logout()">Logout</a>
+      <div class="card-text">
+        <div>E-mail: {{ auth.user.email }}</div>
+        <div>Name: {{ auth.user.fullName }}</div>
+      </div>
+
+
+
+    </div>
+    <div class="card-footer">
+      <a class="btn btn-primary game-button float-end" routerLink="/game"
+        >Go to game page</a
+      >
+      <a class="btn btn-primary logout-button" (click)="logout()">Logout</a>
+    </div>
   </div>
 </div>
-<h3></h3>

@@ -1,0 +1,8 @@
+.user-profile-container {
+  display: block;
+  text-align: center;
+  margin-top: 20px;
+  & .card {
+    text-align: left;
+  }
+}
