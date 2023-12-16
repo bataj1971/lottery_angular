@@ -20,7 +20,6 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { UserListService } from './services/user-list.service';
 import { userListReducer } from './store/userList.reducer';
 
-
 @NgModule({
   declarations: [
     AppComponent,

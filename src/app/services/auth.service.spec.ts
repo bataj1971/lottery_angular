@@ -26,5 +26,4 @@ describe('AuthService', () => {
   it('::auth method should be callable', () => {
     expect(service.auth({ userName: '', password: '' })).toBeTruthy();
   });
-
 });

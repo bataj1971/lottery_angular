@@ -14,8 +14,9 @@ const routes: Routes = [
   {
     path: 'game',
     // lazy loading game module
-    loadChildren:()=> import('./components/pages/game/game.module').then(m=> m.GameModule),
-    canActivate: [AuthGuard]
+    loadChildren: () =>
+      import('./components/pages/game/game.module').then((m) => m.GameModule),
+    canActivate: [AuthGuard],
   },
   {
     path: 'userprofile',
@@ -27,6 +28,6 @@ const routes: Routes = [
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

@@ -27,10 +27,8 @@ describe('LotteryNumberService', () => {
   });
 
   it('#generateLotteryNumbers  - should throw error if selectable number count > than range', () => {
-    expect(
-      function () {
-        service.generateLotteryNumbers(5, 6);
-      }
-    ).toThrowError(Error);
+    expect(function () {
+      service.generateLotteryNumbers(5, 6);
+    }).toThrowError(Error);
   });
 });

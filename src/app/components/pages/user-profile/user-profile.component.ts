@@ -10,24 +10,24 @@ import { Router } from '@angular/router';
   templateUrl: './user-profile.component.html',
   styleUrl: './user-profile.component.scss',
 })
-export class UserProfileComponent implements OnDestroy{
+export class UserProfileComponent implements OnDestroy {
   auth$: Observable<Auth>;
   auth: Auth = new Auth();
   authSubscription: Subscription;
 
-  constructor(private store: Store<{ auth: Auth }>, private router:Router) {
+  constructor(private store: Store<{ auth: Auth }>, private router: Router) {
     this.auth$ = this.store.select('auth');
-    this.authSubscription = this.auth$.subscribe((auth: Auth) => (this.auth = auth));
+    this.authSubscription = this.auth$.subscribe(
+      (auth: Auth) => (this.auth = auth)
+    );
   }
 
   logout() {
     this.store.dispatch(authLogout());
     this.router.navigate(['login']);
-
   }
 
   ngOnDestroy(): void {
     this.authSubscription.unsubscribe();
   }
-
 }

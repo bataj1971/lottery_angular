@@ -25,7 +25,4 @@ describe('UserListService', () => {
   it(' getUserList should be an array ', () => {
     expect(service.getUserList()).toBeInstanceOf(Array);
   });
-
-
-
 });

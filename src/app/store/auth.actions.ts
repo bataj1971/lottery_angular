@@ -1,5 +1,5 @@
-import { createAction ,props} from "@ngrx/store";
-import { Auth } from "./Auth";
+import { createAction, props } from '@ngrx/store';
+import { Auth } from './Auth';
 
 export interface LoginCredentials {
   userName: string;
@@ -14,6 +14,3 @@ export const authLoginWithCredentials = createAction(
 );
 
 export const authLogout = createAction('[auth] AuthLogout');
-
-
-

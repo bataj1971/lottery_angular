@@ -8,17 +8,11 @@ import { Store } from '@ngrx/store';
   providedIn: 'root',
 })
 export class AuthService {
-
   // userList$
 
-  constructor(
-    private userListService: UserListService,
-    private store:Store
-  )
-  { }
+  constructor(private userListService: UserListService, private store: Store) {}
 
-  async auth(loginCredentials: LoginCredentials): Promise<Auth>
-  {
+  async auth(loginCredentials: LoginCredentials): Promise<Auth> {
     console.log('auth try:', loginCredentials);
 
     const auth = new Auth();
@@ -30,21 +24,17 @@ export class AuthService {
 
       console.log('aut user found', user);
 
-
       if (user.password === loginCredentials.password) {
-
         auth.user = user;
         auth.logged = true;
         auth.token = '';
         console.log('successful login');
       } else {
-
         // just for testing, irl we do not expose the reason
         auth.errorMessage = 'Login failed: password error';
       }
     } catch (error) {
       auth.errorMessage = 'Login failed: ' + error;
-
     }
 
     this.store.dispatch(authLogin(auth));

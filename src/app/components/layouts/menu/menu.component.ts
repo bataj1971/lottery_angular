@@ -20,7 +20,7 @@ export class MenuComponent implements OnInit {
   auth: Auth = new Auth();
   authSubscription: Subscription;
 
-  constructor(private store: Store<{ auth: Auth }> ,private router :Router) {
+  constructor(private store: Store<{ auth: Auth }>, private router: Router) {
     this.auth$ = this.store.select('auth');
     this.authSubscription = this.auth$.subscribe(
       (auth: Auth) => (this.auth = auth)
@@ -34,7 +34,7 @@ export class MenuComponent implements OnInit {
   }
 
   logout() {
-    if (!confirm("Confirm logout")) return;
+    if (!confirm('Confirm logout')) return;
     this.store.dispatch(authLogout());
     this.router.navigate(['/login']);
   }

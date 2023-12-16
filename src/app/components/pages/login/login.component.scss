@@ -1,7 +1,6 @@
 @import "../../../../scss/variables";
 
 .login-form-container {
-
   display: block;
   text-align: center;
 
@@ -13,15 +12,13 @@
       border-color: red;
     }
     & .toggle-user-list {
-      float:right;
+      float: right;
     }
     & .error-message {
-      color:red;
+      color: red;
       animation: fadeIn 1s;
     }
   }
-
-
 }
 
 .user-list-container {
@@ -35,9 +32,9 @@
 
     margin-top: 1em;
     animation: fadeIn 1s;
-    & .user-account{
+    & .user-account {
       cursor: pointer;
-      &:hover{
+      &:hover {
         background-color: $colorBackgroundListItemHover;
       }
     }
@@ -45,6 +42,10 @@
 }
 
 @keyframes fadeIn {
-  0% { opacity: 0; }
-  100% { opacity: 1; }
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }

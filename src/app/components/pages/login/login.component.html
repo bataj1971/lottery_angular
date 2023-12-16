@@ -42,17 +42,15 @@
       {{ auth.errorMessage }}
     </div>
   </form>
-
-
 </div>
-  <div class="user-list-container">
-    <ul class="list-group user-list" *ngIf="userSelectListVisible">
-      <li
-        class="list-group-item user-account"
-        *ngFor="let user of userList"
-        (click)="selectUserAccount(user.userName)"
-      >
-        {{ user.fullName }}
-      </li>
-    </ul>
-  </div>
+<div class="user-list-container">
+  <ul class="list-group user-list" *ngIf="userSelectListVisible">
+    <li
+      class="list-group-item user-account"
+      *ngFor="let user of userList"
+      (click)="selectUserAccount(user.userName)"
+    >
+      {{ user.fullName }}
+    </li>
+  </ul>
+</div>

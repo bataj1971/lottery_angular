@@ -1,6 +1,6 @@
-import { createReducer, on } from "@ngrx/store";
-import { Auth } from "./Auth";
-import {  authLogin,  authLogout  } from "./auth.actions";
+import { createReducer, on } from '@ngrx/store';
+import { Auth } from './Auth';
+import { authLogin, authLogout } from './auth.actions';
 
 const initialAuth = new Auth();
 
@@ -10,7 +10,6 @@ export const authReducer = createReducer(
     console.log('authReducer:on authLogin', state, auth);
     return auth;
   }),
-
 
   on(authLogout, (state) => {
     const auth = new Auth();

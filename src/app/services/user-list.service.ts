@@ -9,20 +9,16 @@ export class UserListService {
   private userList: User[] = [];
 
   constructor(private store: Store<{ userList: User[] }>) {
-
     this.userList.push(new User('egon', 'Samuel Egon'));
     this.userList.push(new User('lili', 'Lilian Abercrombey'));
     this.userList.push(new User('tom', 'Tom Waits'));
-    
   }
 
   initService() {
-
     // storing userlist into store:
     this.userList.forEach((user: User) => {
       this.store.dispatch(addUser(user));
     });
-
   }
 
   getUserList(): User[] {

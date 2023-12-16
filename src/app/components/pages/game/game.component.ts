@@ -26,10 +26,8 @@ export class GameComponent implements OnInit {
   numberPanels!: QueryList<NumberPanelComponent>;
 
   ngOnInit(): void {
-
     // create panelList:
     for (let x = 1; x <= this.panelCount; x++) {
-
       this.panelList.push({
         panelNumber: x,
         range: this.range,
@@ -50,7 +48,6 @@ export class GameComponent implements OnInit {
     this.resultMessages = [];
 
     this.numberPanels.forEach((numberPanel) => {
-
       const panelId = numberPanel.panelNumber;
       const selectedNumbers = numberPanel.selectedNumbers;
       const selectedNumberCount = numberPanel.selectedNumbers.length;

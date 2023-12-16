@@ -1,7 +1,8 @@
 .home-container {
   display: block;
   text-align: center;
-  & .card{
+
+  & .card {
     text-align: left;
     display: inline-block;
     max-width: 600px;
