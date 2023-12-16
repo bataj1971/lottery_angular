@@ -1,7 +1,9 @@
-:host {
+.home-container {
   display: block;
-  align-items: center;
-  & .home-container{
-    display: block;
+  text-align: center;
+  & .card{
+    text-align: left;
+    display: inline-block;
+    max-width: 600px;
   }
 }
