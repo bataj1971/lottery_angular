@@ -1,6 +1,5 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { LotteryNumberService } from '../../services/lottery-number.service';
-import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { faShuffle } from '@fortawesome/free-solid-svg-icons';
 import { faTrashCan } from '@fortawesome/free-solid-svg-icons';
 

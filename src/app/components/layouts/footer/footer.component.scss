@@ -1,4 +1,4 @@
-// @import "../../../scss/variables";
+@import "../../../../scss/variables";
 
 :host {
     position: fixed;
@@ -8,15 +8,19 @@
     bottom:0px;
     left:0px;
     right:0px;
-    // background-color:$footerBackgroundColor;
+    background-color:$footerBackgroundColor;
     color:#999;
     padding: 5px;
-    // height: $footerheight;
+    height: $footerheight;
   }
 
   .footermessage {
     display: inline-block;
     padding:5px 10px;
+    & a,:visited,:active {
+      color:#ddd;
+      text-decoration: none;
+    }
   }
 
   button {
@@ -27,7 +31,6 @@
 
   @media (max-width: 600px) {
     :host {
-
-      // font-size:$baseFontSize;
+      font-size:$baseFontSize;
     }
   }

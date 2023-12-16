@@ -17,7 +17,6 @@ export class AuthService {
   )
   { }
 
-  // async auth(userName: string, password: string): Promise<Auth>
   async auth(loginCredentials: LoginCredentials): Promise<Auth>
   {
     console.log('auth try:', loginCredentials);

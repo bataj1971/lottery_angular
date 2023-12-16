@@ -11,6 +11,10 @@ export class LotteryNumberService {
     selectedNumberCount: number = 6
   ): number[] {
     if (selectedNumberCount > range) {
+      console.error(
+        'LotteryNumberService:generateLotteryNumbers range must be higher than selectedNumberCount'
+      );
+
       throw new Error(
         'LotteryNumberService:generateLotteryNumbers range must be higher than selectedNumberCount'
       );
