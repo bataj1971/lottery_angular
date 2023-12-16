@@ -9,7 +9,14 @@ import { AuthGuard } from './auth/auth.guard';
 const routes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'home', component: HomeComponent },
-  { path: 'game', component: GameComponent, canActivate: [AuthGuard] },
+  //  game page with
+  //  { path: 'game', component: GameComponent, canActivate: [AuthGuard] },
+  {
+    path: 'game',
+    // lazy loading game module
+    loadChildren:()=> import('./components/pages/game/game.module').then(m=> m.GameModule),
+    canActivate: [AuthGuard]
+  },
   {
     path: 'userprofile',
     component: UserProfileComponent,

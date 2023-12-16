@@ -5,12 +5,13 @@ import { AppRoutingModule } from './app-routing.module';
 import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
-import { NumberPanelComponent } from './components/number-panel/number-panel.component';
+
 import { FooterComponent } from './components/layouts/footer/footer.component';
 import { HeaderComponent } from './components/layouts/header/header.component';
 import { LoginComponent } from './components/pages/login/login.component';
-import { GameComponent } from './components/pages/game/game.component';
-import { NumberComponent } from './components/number-panel/number/number.component';
+// import { GameComponent } from './components/pages/game/game.component';
+// import { NumberPanelComponent } from './components/number-panel/number-panel.component';
+// import { NumberComponent } from './components/number-panel/number/number.component';
 import { MenuComponent } from './components/layouts/menu/menu.component';
 import { HomeComponent } from './components/pages/home/home.component';
 import { UserProfileComponent } from './components/pages/user-profile/user-profile.component';
@@ -23,12 +24,13 @@ import { userListReducer } from './store/userList.reducer';
 @NgModule({
   declarations: [
     AppComponent,
-    NumberPanelComponent,
     FooterComponent,
     HeaderComponent,
     LoginComponent,
-    GameComponent,
-    NumberComponent,
+    // removing components, used in GameModule for lazyloading
+    // NumberPanelComponent,
+    // GameComponent,
+    // NumberComponent,
     MenuComponent,
     HomeComponent,
     UserProfileComponent,

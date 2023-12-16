@@ -1,6 +1,6 @@
 import { TestBed } from '@angular/core/testing';
 
-import { User, UserListService } from './user-list.service';
+import { UserListService } from './user-list.service';
 import { userListReducer } from '../store/userList.reducer';
 import { StoreModule } from '@ngrx/store';
 
